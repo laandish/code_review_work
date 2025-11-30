@@ -1,17 +1,34 @@
 public class Calculator {
+
     public int add(int a, int b){
-        //TODO inser your realisation in method add
+        return a + b;
     }
+
     public int dif(int a, int b){
-        //TODO inser your realisation in method dif
+        return a - b;
     }
+
     public int div(int a, int b){
-        //TODO inser your realisation in method div
+        if (b == 0) {
+            throw new ArithmeticException("Division by zero is not allowed");
+        }
+        return a / b;
     }
+
     public int times(int a, int b){
-        //TODO inser your realisation in method times
+        return a * b;
     }
+
+    // (3x*x - 2x + 5) для x = 3
     public int solver(){
-        //TODO inser your realisation in method solver
+        int x = 3;
+
+        int xSquared = times(x, x);           // 9
+        int term1 = times(3, xSquared);       // 27
+        int term2 = times(-2, x);             // -6
+        int sum1 = add(term1, term2);         // 21
+        int result = add(sum1, 5);            // 26
+
+        return result;
     }
 }
