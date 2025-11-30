@@ -19,15 +19,13 @@ public class Calculator {
         return a * b;
     }
 
-    // (3x*x - 2x + 5) для x = 3
+    // (x² + 3x - 4) для x=2
     public int solver(){
-        int x = 3;
-
-        int xSquared = times(x, x);           // 9
-        int term1 = times(3, xSquared);       // 27
-        int term2 = times(-2, x);             // -6
-        int sum1 = add(term1, term2);         // 21
-        int result = add(sum1, 5);            // 26
+        //  (5 * 3) + (10 - 4) / 2
+        int part1 = times(5, 3);      // 5 * 3 = 15
+        int part2 = dif(10, 4);       // 10 - 4 = 6
+        int part3 = div(part2, 2);    // 6 / 2 = 3
+        int result = add(part1, part3); // 15 + 3 = 18
 
         return result;
     }
